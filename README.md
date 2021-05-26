@@ -1,2 +1,2 @@
 # TTS
-Text to speach project for course MYY803
+Text to speech project for course MYY803
