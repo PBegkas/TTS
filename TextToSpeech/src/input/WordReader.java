@@ -3,32 +3,38 @@ package input;
 import java.util.List;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.openxml4j.opc.OPCPackage;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
-import org.apache.poi.poifs.*;
 
 public class WordReader implements DocumentReader
 {
-	
-	
+	private List<String> content;
+	private XWPFDocument document;
 	WordReader(String path)
 	{
 		
-		File file = new File(path);
+		
 		try {
+			File file = new File(path);
 			FileInputStream fis = new FileInputStream(file);
-		} catch (FileNotFoundException e) {
+			
+			document = new XWPFDocument(OPCPackage.open(fis));
+			
+		} catch (Exception e) {
 			System.out.println("file not found at: " + path );
 		}
-		POIFSFileSystem fileSystem = new POIFSFileSystem(fis);
 	}
 
 	@Override
 	public List<String> read() 
 	{
-		// TODO Auto-generated method stub
-		return null;
+		List<XWPFParagraph> paragraphList =  document.getParagraphs();
+	       for (XWPFParagraph paragraph: paragraphList){
+		   content.add(paragraph.getText());
+	       }
+		return content;
 	}
 
 }
