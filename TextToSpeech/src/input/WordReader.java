@@ -4,8 +4,7 @@ import java.util.List;
 import java.io.File;
 import java.io.FileInputStream;
 
-import org.apache.poi.xwpf.extractor.XPFFWordExtracto
-
+import org.apache.poi.xwpf.extractor.XPFFWordExtractor;
 
 public class WordReader implements DocumentReader
 {

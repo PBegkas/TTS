@@ -2,7 +2,6 @@ package model;
 
 import java.util.ArrayList;
 import encodingstrategies.*;
-import text2speechapis.*;
 
 public class Line {
 	private ArrayList<String> words;
@@ -20,7 +19,7 @@ public class Line {
 		TextToSpeechAPIFactory fact = new TextToSpeechAPIFactory();
 		audioManager = fact.createTTSAPI("real");
 	}
-	public Line(ArrayList<String> words, TextToSpeechAPI audioManager) {
+	public Line(ArrayList<String> words, TTSFacade audioManager) {
 		this.words = words;
 		this.audioManager = audioManager;
 	}
