@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jars/Client.jar"/>
+	<classpathentry kind="lib" path="jars/cmu_time_awb.jar"/>
+	<classpathentry kind="lib" path="jars/cmu_us_kal.jar"/>
+	<classpathentry kind="lib" path="jars/cmudict04.jar"/>
+	<classpathentry kind="lib" path="jars/cmulex.jar"/>
+	<classpathentry kind="lib" path="jars/cmutimelex.jar"/>
+	<classpathentry kind="lib" path="jars/EmacspeakServer.jar"/>
+	<classpathentry kind="lib" path="jars/en_us.jar"/>
+	<classpathentry kind="lib" path="jars/freetts.jar"/>
+	<classpathentry kind="lib" path="jars/FreeTTSEmacspeakServer.jar"/>
+	<classpathentry kind="lib" path="jars/FreeTTSHelloWorld.jar"/>
+	<classpathentry kind="lib" path="jars/freetts-jsapi10.jar"/>
+	<classpathentry kind="lib" path="jars/HelloWorld.jar"/>
+	<classpathentry kind="lib" path="jars/JTime.jar"/>
+	<classpathentry kind="lib" path="jars/mbrola.jar"/>
+	<classpathentry kind="lib" path="jars/MixedVoices.jar"/>
+	<classpathentry kind="lib" path="jars/Player.jar"/>
+	<classpathentry kind="lib" path="jars/Server.jar"/>
+	<classpathentry kind="lib" path="jars/WebStartClock.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
